@@ -15,6 +15,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@assets': path.resolve(__dirname, 'src/assets'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -35,7 +38,6 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/dist',
     clean: true,
   },
   module: {

@@ -4,7 +4,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 export const PdfViewer = () => {
   return (
-    <Document options={{ cMapUrl: 'cmaps/', cMapPacked: true }} file={pdf}>
+    <Document file={pdf}>
       <Page pageNumber={1} />
       <Page pageNumber={2} />
     </Document>

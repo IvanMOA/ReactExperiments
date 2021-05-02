@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { PdfViewer } from './Experiments/PdfViewer';
+import React, { useState } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { PdfViewer, Fp } from "./Experiments";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
+            <Fp />
+          </Route>
+          <Route exact path="/fp">
             <PdfViewer />
           </Route>
         </Switch>

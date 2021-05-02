@@ -10,7 +10,7 @@ describe("Test", () => {
 
   const setup = () => {
     emailInput = screen.getByTestId("email_input");
-    emailInput = screen.getByTestId("password_input");
+    passwordInput = screen.getByTestId("password_input");
   };
 
   beforeEach(() => {
@@ -20,6 +20,6 @@ describe("Test", () => {
   });
 
   it("Calls onsubmit when form is submitted", () => {
-    expect(emailInput).toBeTruthy();
+    expect(emailInput).toBeInTheDocument();
   });
 });

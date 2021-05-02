@@ -1,7 +1,7 @@
 import { Login } from "./components";
 import React, { useState } from "react";
 import * as TE from "fp-ts/TaskEither";
-import { auth } from "services/supabase";
+import { auth } from "../../services/supabase";
 
 export const Fp = () => {
   const onLogin = (email: string, password: string) =>

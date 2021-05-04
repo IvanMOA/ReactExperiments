@@ -1,17 +1,13 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-    hot: true,
-  },
   entry: {
     index: "./src/index.tsx",
+  },
+  optimization: {
+    usedExports: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -24,7 +20,6 @@ module.exports = {
       template: "./public/index.html",
       title: "Output managment",
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
   // Module
   output: {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { PdfViewer, Fp } from "./Experiments";
+// import { Fp } from "./Experiments";
 
 const App = () => {
   return (
@@ -8,10 +8,10 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Fp />
+            {/* <Fp /> */}
           </Route>
           <Route exact path="/fp">
-            <PdfViewer />
+            {/* <PdfViewer /> */}
           </Route>
         </Switch>
       </BrowserRouter>

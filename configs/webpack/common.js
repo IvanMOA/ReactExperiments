@@ -6,13 +6,10 @@ module.exports = {
   entry: {
     index: "./src/index.tsx",
   },
-  optimization: {
-    usedExports: true,
-  },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
-      "@assets": path.resolve(__dirname, "src/assets"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
     },
   },
   plugins: [
@@ -24,7 +21,7 @@ module.exports = {
   // Module
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../../dist"),
     clean: true,
   },
   // Module

@@ -1,5 +1,6 @@
 declare namespace Cypress {
   interface Chainable<Subject> {
-    signin(): Chainable<Element>;
+    signin(): void;
+    signup(): void;
   }
 }

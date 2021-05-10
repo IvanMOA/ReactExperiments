@@ -1,3 +1,4 @@
 Cypress.Commands.add("signin", () => {
-  return cy.get('[data-testid="email_input"]');
+  cy.visit("http://localhost:8080");
+  cy.get('[data-testid="email_input"]');
 });
